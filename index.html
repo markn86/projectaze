@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mark's game</title>
+    <script type="text/javascript" src="phaser/build/phaser.min.js"></script>
+    <script type="text/javascript" src="lib/states/Load.js"></script>
+    <script type="text/javascript" src="lib/states/Game.js"></script>
+    <script type="text/javascript" src="lib/objects/Ball.js"></script>
+    <style type="text/css">
+        canvas {
+            border-style: solid;
+            border-width: 1px 1px 1px 1px;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+    var mg = mg || {};
+    mg.game = new Phaser.Game(800, 600, Phaser.AUTO, '');
+    mg.game.state.add('Load', mg.Load);
+    mg.game.state.add('Game', mg.Game);
+    mg.game.state.start('Load');
+</script>
+
+</body>
+</html>
